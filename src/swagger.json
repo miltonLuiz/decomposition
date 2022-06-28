@@ -1,0 +1,47 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Decomposition Documentation",
+    "description": "This is an API for decompose positive and integer number into divisors and prime number.",
+    "version": "1.0.0",
+    "contact": {
+      "email": "milton.luiz@live.com"
+    }
+  },
+  "paths": {
+    "/decomposition": {
+      "post": {
+        "summary": "Decompose a number",
+        "description": "Decompose a number into divisors and prime numbers.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "numberToBeDecompose": {
+                    "type": "number"
+                  }
+                },
+                "example": {
+                  "numberToBeDecompose": 45
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success | Decomposition successfully executed"
+          },
+          "500": {
+            "description": "Internal server error"
+          },
+          "400": {
+            "description": "Bad request | Possible error with JSON"
+          }
+        }
+      }
+    }
+  }
+}
