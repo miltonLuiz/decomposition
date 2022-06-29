@@ -1,4 +1,4 @@
-# Decomposição de número
+# Number decomposition using Node.JS with TypeScript
 
 ### 1. Install app dependencies
 
